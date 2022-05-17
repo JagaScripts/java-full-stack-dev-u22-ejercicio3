@@ -106,13 +106,10 @@ public class Asignado_A extends ServicioBD{
 	public String toString() {
 		
 	
-		Cientificos titleAux;
-		Proyecto directorAux;
-		
-
+	
 	
 		
-		return "(default ," +  titleAux + ", " + directorAux + ")";
+		return "(" + this.cientifico.getDNI() + ", " + this.proyecto.getId() + ")";
 	}
 		
 	
