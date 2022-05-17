@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.team2.u22.ejercicio2.controlador;
+package com.team2.u22.ejercicio3.controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,7 +21,7 @@ import com.team2.u22.ejercicio3.vista.Vista;
  * 
  *         Fecha de creación 17/05/2022
  */
-public class proyectoControler implements ActionListener {
+public class ProyectoControler implements ActionListener {
 
 	private Proyecto proyecto;
 	private Vista vista;
@@ -31,7 +31,7 @@ public class proyectoControler implements ActionListener {
 	 * @param video
 	 * @param vista
 	 */
-	public proyectoControler(Proyecto proyecto, Vista vista) {
+	public ProyectoControler(Proyecto proyecto, Vista vista) {
 		this.proyecto = proyecto;
 		this.vista = vista;
 

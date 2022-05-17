@@ -2,7 +2,8 @@ package com.team2.u22.ejercicio3;
 
 import com.team2.u22.ejercicio3.controlador.CientificosControler;
 import com.team2.u22.ejercicio3.controlador.ProyectoControler;
-import com.team2.u22.ejercicio3.controlador.AsignadoAControler;
+import com.team2.u22.ejercicio3.controlador.AsignadoAControlador;
+import com.team2.u22.ejercicio3.modelo.AsignadoA;
 import com.team2.u22.ejercicio3.modelo.Cientificos;
 import com.team2.u22.ejercicio3.modelo.Proyecto;
 import com.team2.u22.ejercicio3.vista.Vista;
@@ -24,7 +25,7 @@ public class App
 				AsignadoA asignadoa = new AsignadoA();
 				CientificosControler cc = new CientificosControler(cientifico, frame);
 				ProyectoControler pc = new ProyectoControler(proyecto, frame);
-				AsignadoControler ac = new AsignadoControler(asignadoa, frame);
+				AsignadoAControlador ac = new AsignadoAControlador(cientifico, proyecto, frame);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

@@ -8,13 +8,13 @@ import com.team2.u22.ejercicio3.modelo.Cientificos;
 import com.team2.u22.ejercicio3.modelo.Proyecto;
 import com.team2.u22.ejercicio3.vista.Vista;
 
-public class Asignado_AControlador implements ActionListener{
+public class AsignadoAControlador implements ActionListener{
 
 	private Cientificos cientifico;
 	private Proyecto proyecto;
 	private Vista vista;
 	
-	public Asignado_AControlador(Cientificos c ,Proyecto p, Vista v) {
+	public AsignadoAControlador(Cientificos c ,Proyecto p, Vista v) {
 		
 		this.cientifico = c;
 		this.proyecto = p;

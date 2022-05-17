@@ -83,15 +83,22 @@ public class AsignadoA extends ServicioBD{
 	@Override
 	public String leerTablaBaseDatos(String nombreBaseDatos, String tabla, int numeroAtributos) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "cientifico";
+		tabla = "asignado_a";
 		return super.leerTablaBaseDatos(nombreBaseDatos, tabla, numeroAtributos);
 	}
 
 	@Override
 	public void actualizarRegistro(String nombreBaseDatos, String tabla, String atributo, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "proyecto";
+		tabla = "asignado_a";
 		super.actualizarRegistro(nombreBaseDatos, tabla, atributo, identificador);
+	}
+
+	@Override
+	public void eliminarRegistro(String nombreBaseDatos, String tabla, String identificador) throws SQLException{
+		nombreBaseDatos = "ud22_ejercicios_db_clientes";
+		tabla = "asignado_a";
+		super.eliminarRegistro(nombreBaseDatos, tabla, identificador);
 	}
 
 	
@@ -99,7 +106,8 @@ public class AsignadoA extends ServicioBD{
 	public String toString() {
 		
 	
-
+	
+	
 		
 		return "(" + this.cientifico.getDNI() + ", " + this.proyecto.getId() + ")";
 	}
