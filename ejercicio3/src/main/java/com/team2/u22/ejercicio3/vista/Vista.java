@@ -38,8 +38,14 @@ public class Vista extends JFrame {
 	public JTextField txtTituloA;
 	public JTextField txtDirectorA;
 	public JTextArea textAreaVideos;
-	private JTextField textField;
-	private JTextField textField_1;
+	public JTextField textField;
+	public JTextField textField_1;
+
+	
+	
+	public JButton botonAU_1_2;
+	public JButton botonBU_1_1;
+	public JTextArea textAreaVideos_1_1;
 	/**
 	 * Create the frame.
 	 */
@@ -236,7 +242,7 @@ public class Vista extends JFrame {
 		textField_1.setBounds(207, 43, 86, 20);
 		panelActualizar_1_1.add(textField_1);
 		
-		JButton botonAU_1_2 = new JButton("Asignar");
+		botonAU_1_2 = new JButton("Asignar");
 		botonAU_1_2.setBounds(130, 171, 101, 23);
 		panelActualizar_1_1.add(botonAU_1_2);
 		
@@ -255,11 +261,11 @@ public class Vista extends JFrame {
 		lblNewLabel_6_3_1_1.setBounds(10, 11, 280, 21);
 		panelBorrar_1_1.add(lblNewLabel_6_3_1_1);
 		
-		JButton botonBU_1_1 = new JButton("Filtrar");
+		botonBU_1_1 = new JButton("Filtrar");
 		botonBU_1_1.setBounds(132, 171, 89, 23);
 		panelBorrar_1_1.add(botonBU_1_1);
 		
-		JTextArea textAreaVideos_1_1 = new JTextArea();
+		textAreaVideos_1_1 = new JTextArea();
 		textAreaVideos_1_1.setBounds(10, 43, 332, 124);
 		panelBorrar_1_1.add(textAreaVideos_1_1);
 	}
