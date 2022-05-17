@@ -114,33 +114,25 @@ public class Proyecto extends ServicioBD{
 	@Override
 	public String leerTablaBaseDatos(String nombreBaseDatos, String tabla, int numeroAtributos) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
+
 		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
 		return super.leerTablaBaseDatos(nombreBaseDatos, tabla, numeroAtributos);
 	}
 
 	@Override
 	public void actualizarRegistro(String nombreBaseDatos, String tabla, String atributo, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
+
 		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
+
 		super.actualizarRegistro(nombreBaseDatos, tabla, atributo, identificador);
 	}
 
 	@Override
 	public void eliminarRegistro(String nombreBaseDatos, String tabla, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
+
 		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
 		super.eliminarRegistro(nombreBaseDatos, tabla, identificador);
 	}
 
