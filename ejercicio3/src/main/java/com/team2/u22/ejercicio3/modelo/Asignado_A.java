@@ -19,9 +19,8 @@ import com.team2.u22.ejercicio3.modelo.gestiondb.ServicioBD;
 public class Asignado_A extends ServicioBD{
 	
 	private Cientificos cientifico ;
-	private int id;
-	private String nombre;
-	private int horas;
+	private Proyecto proyecto;
+
 
 	/**
 	 * 
@@ -37,65 +36,34 @@ public class Asignado_A extends ServicioBD{
 	 * @param director
 	 * @param cliente
 	 */
-	public Asignado_A(int id, String nombre, int Horas) {
-		this.id = id;
-		this.nombre = nombre;
-		this.horas = Horas;
-	}
+	public Asignado_A(Cientificos cientifico, Proyecto proyecto) {
+		this.cientifico = cientifico;
+		this.proyecto = proyecto;
 
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
 	}
 
 
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
+	public Cientificos getCientifico() {
+		return cientifico;
 	}
 
 
 
-	/**
-	 * @return the title
-	 */
-	public String getnombre() {
-		return nombre;
+	public void setCientifico(Cientificos cientifico) {
+		this.cientifico = cientifico;
 	}
 
 
 
-	/**
-	 * @param title the title to set
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public Proyecto getProyecto() {
+		return proyecto;
 	}
 
 
 
-	/**
-	 * @return the director
-	 */
-	public int getHoras() {
-		return horas;
+	public void setProyecto(Proyecto proyecto) {
+		this.proyecto = proyecto;
 	}
-
-
-
-	/**
-	 * @param director the director to set
-	 */
-	public void setHoras(int Horas) {
-		this.horas = Horas;
-	}
-
-
 
 
 
@@ -138,24 +106,13 @@ public class Asignado_A extends ServicioBD{
 	public String toString() {
 		
 	
-		String titleAux;
-		String directorAux;
+		Cientificos titleAux;
+		Proyecto directorAux;
 		
-		if(!this.nombre.equals("")) {
-			titleAux = "'" + this.nombre + "'";
-		}else {
-			titleAux = null;
-		}
-		
-		if(!this.nombre.equals("")) {
-			directorAux = "'" + this.nombre + "'";
-		}else {
-			directorAux = null;
-		}
-		
+
 	
 		
-		return "(default ," + id + ", " + titleAux + ", " + directorAux+")";
+		return "(default ," +  titleAux + ", " + directorAux + ")";
 	}
 		
 	
