@@ -18,7 +18,7 @@ import com.team2.u22.ejercicio3.modelo.gestiondb.ServicioBD;
  */
 public class Proyecto extends ServicioBD{
 	
-	private int id;
+	private String id;
 	private String nombre;
 	private int horas;
 
@@ -36,7 +36,7 @@ public class Proyecto extends ServicioBD{
 	 * @param director
 	 * @param cliente
 	 */
-	public Proyecto(int id, String nombre, int horas) {
+	public Proyecto(String id, String nombre, int horas) {
 		this.id = id;
 		this.nombre = nombre;
 		this.horas = horas;
@@ -45,7 +45,7 @@ public class Proyecto extends ServicioBD{
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -54,7 +54,7 @@ public class Proyecto extends ServicioBD{
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -114,21 +114,21 @@ public class Proyecto extends ServicioBD{
 	@Override
 	public String leerTablaBaseDatos(String nombreBaseDatos, String tabla, int numeroAtributos) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "videos";
+		tabla = "id";
 		return super.leerTablaBaseDatos(nombreBaseDatos, tabla, numeroAtributos);
 	}
 
 	@Override
 	public void actualizarRegistro(String nombreBaseDatos, String tabla, String atributo, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "videos";
+		tabla = "id";
 		super.actualizarRegistro(nombreBaseDatos, tabla, atributo, identificador);
 	}
 
 	@Override
 	public void eliminarRegistro(String nombreBaseDatos, String tabla, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "videos";
+		tabla = "id";
 		super.eliminarRegistro(nombreBaseDatos, tabla, identificador);
 	}
 
@@ -137,16 +137,22 @@ public class Proyecto extends ServicioBD{
 	public String toString() {
 
 		String nombreAux;
+		String idAux;
 
 		if(!this.nombre.equals("")) {
 			nombreAux = "'" + this.nombre + "'";
 		}else {
 			nombreAux = null;
 		}
+		if(!this.nombre.equals("")) {
+			idAux = "'" + this.nombre + "'";
+		}else {
+			idAux = null;
+		}
 
 		
 		
-		return "(default ," + id + ", " + nombreAux + ")";
+		return "(default ," + id + ", " + nombreAux + ", " + idAux + ")";
 	}
 		
 	

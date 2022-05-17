@@ -30,6 +30,10 @@ public class Vista extends JFrame {
 	public JButton botonAU_1;
 	public JButton botonFU_1;
 	public JButton botonBU_1;
+	public JButton botonCU_1_1;
+	public JButton botonAU_1_3;
+
+
 	
 	public JTextField txtIdVideo;
 	public JTextField txtTítulo;
@@ -175,7 +179,7 @@ public class Vista extends JFrame {
 		panelActualizar_1.add(lblNewLabel_6_2_1);
 		lblNewLabel_6_2_1.setFont(new Font("SansSerif", Font.BOLD, 16));
 		
-		JButton botonCU_1_1 = new JButton("Enviar");
+		botonCU_1_1 = new JButton("Enviar");
 		botonCU_1_1.setBounds(10, 151, 89, 23);
 		panelActualizar_1.add(botonCU_1_1);
 		
@@ -183,7 +187,7 @@ public class Vista extends JFrame {
 		lblNewLabel_1_1_1_1.setBounds(109, 136, 61, 14);
 		panelActualizar_1.add(lblNewLabel_1_1_1_1);
 		
-		JButton botonAU_1_3 = new JButton("Borrar");
+		botonAU_1_3 = new JButton("Borrar");
 		botonAU_1_3.setBounds(229, 151, 101, 23);
 		panelActualizar_1.add(botonAU_1_3);
 		
