@@ -86,7 +86,7 @@ public class Cientificos extends ServicioBD{
 	@Override
 	public void crearRegistro(String nombreBaseDatos, String tabla, String cliente) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "cliente";
+		tabla = "cientificos";
 		super.crearRegistro(nombreBaseDatos, tabla, this.toString());
 	}
 	@Override
@@ -131,7 +131,7 @@ public class Cientificos extends ServicioBD{
 			DniAux = null;
 		}
 		
-		return "(default ," + DniAux + nombreAux + ", " + apellidoAux + ")";
+		return "(default ," + DniAux + ", "+ nombreAux + ", " + apellidoAux + ")";
 	}
 	
 	

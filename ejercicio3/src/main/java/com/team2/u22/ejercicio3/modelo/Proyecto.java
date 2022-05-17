@@ -20,7 +20,7 @@ public class Proyecto extends ServicioBD{
 	
 	private int id;
 	private String nombre;
-	private int Horas;
+	private int horas;
 
 	/**
 	 * 
@@ -36,10 +36,10 @@ public class Proyecto extends ServicioBD{
 	 * @param director
 	 * @param cliente
 	 */
-	public Proyecto(int id, String nombre, int Horas) {
+	public Proyecto(int id, String nombre, int horas) {
 		this.id = id;
 		this.nombre = nombre;
-		this.Horas = Horas;
+		this.horas = horas;
 	}
 
 	/**
@@ -81,8 +81,8 @@ public class Proyecto extends ServicioBD{
 	/**
 	 * @return the director
 	 */
-	public int getHoras() {
-		return Horas;
+	public int gethoras() {
+		return horas;
 	}
 
 
@@ -90,8 +90,8 @@ public class Proyecto extends ServicioBD{
 	/**
 	 * @param director the director to set
 	 */
-	public void setHoras(int Horas) {
-		this.Horas = Horas;
+	public void sethoras(int horas) {
+		this.horas = horas;
 	}
 
 
@@ -107,7 +107,7 @@ public class Proyecto extends ServicioBD{
 	@Override
 	public void crearRegistro(String nombreBaseDatos, String tabla, String registros) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "videos";
+		tabla = "proyecto";
 		super.crearRegistro(nombreBaseDatos, tabla, registros);
 	}
 
@@ -135,26 +135,18 @@ public class Proyecto extends ServicioBD{
 	
 	@Override
 	public String toString() {
-		
-	
-		String titleAux;
-		String directorAux;
-		
+
+		String nombreAux;
+
 		if(!this.nombre.equals("")) {
-			titleAux = "'" + this.nombre + "'";
+			nombreAux = "'" + this.nombre + "'";
 		}else {
-			titleAux = null;
+			nombreAux = null;
 		}
+
 		
-		if(!this.nombre.equals("")) {
-			directorAux = "'" + this.nombre + "'";
-		}else {
-			directorAux = null;
-		}
 		
-	
-		
-		return "(default ," + id + ", " + titleAux + ", " + directorAux+")";
+		return "(default ," + id + ", " + nombreAux + ")";
 	}
 		
 	
