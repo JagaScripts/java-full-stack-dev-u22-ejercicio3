@@ -31,13 +31,12 @@ public class Vista extends JFrame {
 	public JButton botonFU_1;
 	public JButton botonBU_1;
 	
-	public JTextField txtIdVideo;
-	public JTextField txtTítulo;
-	public JTextField txtDirector;
+	public JTextField txtDni;
+	public JTextField txtNombre;
 	public JTextField txtIdVideoA;
 	public JTextField txtTituloA;
 	public JTextField txtDirectorA;
-	public JTextArea textAreaVideos;
+	public JTextArea textAreaCientificos;
 	private JTextField textField;
 	private JTextField textField_1;
 	/**
@@ -60,28 +59,19 @@ public class Vista extends JFrame {
 		lblNewLabel_1_2.setBounds(10, 55, 61, 14);
 		panelCrear_1.add(lblNewLabel_1_2);
 		
-		txtIdVideo = new JTextField();
-		txtIdVideo.setColumns(10);
-		txtIdVideo.setBounds(65, 52, 122, 20);
-		panelCrear_1.add(txtIdVideo);
+		txtDni = new JTextField();
+		txtDni.setColumns(10);
+		txtDni.setBounds(65, 52, 122, 20);
+		panelCrear_1.add(txtDni);
 		
-		JLabel lblNewLabel_2_2 = new JLabel("Nombre:");
-		lblNewLabel_2_2.setBounds(10, 83, 56, 14);
+		JLabel lblNewLabel_2_2 = new JLabel("Nombre Completo:");
+		lblNewLabel_2_2.setBounds(10, 83, 116, 14);
 		panelCrear_1.add(lblNewLabel_2_2);
 		
-		txtTítulo = new JTextField();
-		txtTítulo.setColumns(10);
-		txtTítulo.setBounds(65, 80, 86, 20);
-		panelCrear_1.add(txtTítulo);
-		
-		JLabel lblNewLabel_3_2 = new JLabel("Apellido:");
-		lblNewLabel_3_2.setBounds(10, 111, 41, 14);
-		panelCrear_1.add(lblNewLabel_3_2);
-		
-		txtDirector = new JTextField();
-		txtDirector.setColumns(10);
-		txtDirector.setBounds(65, 108, 122, 20);
-		panelCrear_1.add(txtDirector);
+		txtNombre = new JTextField();
+		txtNombre.setColumns(10);
+		txtNombre.setBounds(101, 83, 86, 20);
+		panelCrear_1.add(txtNombre);
 		
 		botonCU_1 = new JButton("Enviar");
 		botonCU_1.addActionListener(new ActionListener() {
@@ -117,9 +107,9 @@ public class Vista extends JFrame {
 		panelLeer_1.setBounds(390, 11, 352, 205);
 		contentPane.add(panelLeer_1);
 		
-		textAreaVideos = new JTextArea();
-		textAreaVideos.setBounds(10, 41, 332, 124);
-		panelLeer_1.add(textAreaVideos);
+		textAreaCientificos = new JTextArea();
+		textAreaCientificos.setBounds(10, 41, 332, 124);
+		panelLeer_1.add(textAreaCientificos);
 		
 		JLabel lblNewLabel_6_1_1 = new JLabel("Filtrar Cientifico");
 		lblNewLabel_6_1_1.setFont(new Font("SansSerif", Font.BOLD, 16));

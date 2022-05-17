@@ -20,8 +20,7 @@ import com.team2.u22.ejercicio3.modelo.gestiondb.ServicioBD;
 public class Cientificos extends ServicioBD{
 	
 	private String DNI;
-	private String nombre;
-	private String apellido;
+	private String nombreCompleto;
 	
 	
 	/**
@@ -31,11 +30,10 @@ public class Cientificos extends ServicioBD{
 	 * @param dni
 	 * @param fecha
 	 */
-	public Cientificos(String nombre, String apellido, String Dni) {
+	public Cientificos(String nombreCompleto, String Dni) {
 		super();
 		this.DNI = Dni;
-		this.nombre = nombre;
-		this.apellido = apellido;
+		this.nombreCompleto = nombreCompleto;
 
 	}
 	public Cientificos() {
@@ -56,26 +54,14 @@ public class Cientificos extends ServicioBD{
 	/**
 	 * @return the nombre
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getNombreCompleto() {
+		return nombreCompleto;
 	}
 	/**
 	 * @param nombre the nombre to set
 	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	/**
-	 * @return the apellido
-	 */
-	public String getApellido() {
-		return apellido;
-	}
-	/**
-	 * @param apellido the apellido to set
-	 */
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
 	}
 	
 	@Override
@@ -113,25 +99,19 @@ public class Cientificos extends ServicioBD{
 		String apellidoAux;
 		String DniAux;
 		
-		if(!this.nombre.equals("")) {
-			nombreAux = "'" + this.nombre + "'";
+		if(!this.nombreCompleto.equals("")) {
+			nombreAux = "'" + this.nombreCompleto + "'";
 		}else {
-			nombreAux = null;
+			nombreAux = "vacio";
 		}
 		
-		if(!this.apellido.equals("")) {
-			apellidoAux = "'" + this.apellido + "'";
-		}else {
-			apellidoAux = null;
-		}
-	
 		if(!this.DNI.equals("")) {
 			DniAux = "'" + this.DNI + "'";
 		}else {
 			DniAux = null;
 		}
 		
-		return "(default ," + DniAux + ", "+ nombreAux + ", " + apellidoAux + ")";
+		return "(default ," + DniAux + ", "+ nombreAux + ")";
 	}
 	
 	
