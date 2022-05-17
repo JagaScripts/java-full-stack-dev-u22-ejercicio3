@@ -16,7 +16,6 @@ public class App
 {
     public static void main( String[] args )
     {
-    	public void run() {
 			try {
 				Vista frame = new Vista();
 				frame.setVisible(true);
@@ -29,6 +28,6 @@ public class App
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		
     }
 }
