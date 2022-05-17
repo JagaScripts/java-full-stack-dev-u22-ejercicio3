@@ -16,16 +16,16 @@ import com.team2.u22.ejercicio3.modelo.gestiondb.ServicioBD;
  * 
  * Fecha de creación 15/05/2022
  */
-public class Proyecto extends ServicioBD{
+public class Asignado_A extends ServicioBD{
 	
-	private String id;
-	private String nombre;
-	private int horas;
+	private Cientificos cientifico ;
+	private Proyecto proyecto;
+
 
 	/**
 	 * 
 	 */
-	public Proyecto() {
+	public Asignado_A() {
 	}
 	
 	
@@ -36,65 +36,34 @@ public class Proyecto extends ServicioBD{
 	 * @param director
 	 * @param cliente
 	 */
-	public Proyecto(String id, String nombre, int horas) {
-		this.id = id;
-		this.nombre = nombre;
-		this.horas = horas;
-	}
+	public Asignado_A(Cientificos cientifico, Proyecto proyecto) {
+		this.cientifico = cientifico;
+		this.proyecto = proyecto;
 
-	/**
-	 * @return the id
-	 */
-	public String getId() {
-		return id;
 	}
 
 
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(String id) {
-		this.id = id;
+	public Cientificos getCientifico() {
+		return cientifico;
 	}
 
 
 
-	/**
-	 * @return the title
-	 */
-	public String getnombre() {
-		return nombre;
+	public void setCientifico(Cientificos cientifico) {
+		this.cientifico = cientifico;
 	}
 
 
 
-	/**
-	 * @param title the title to set
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public Proyecto getProyecto() {
+		return proyecto;
 	}
 
 
 
-	/**
-	 * @return the director
-	 */
-	public int gethoras() {
-		return horas;
+	public void setProyecto(Proyecto proyecto) {
+		this.proyecto = proyecto;
 	}
-
-
-
-	/**
-	 * @param director the director to set
-	 */
-	public void sethoras(int horas) {
-		this.horas = horas;
-	}
-
-
 
 
 
@@ -107,64 +76,40 @@ public class Proyecto extends ServicioBD{
 	@Override
 	public void crearRegistro(String nombreBaseDatos, String tabla, String registros) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "proyecto";
+		tabla = "asignado_a";
 		super.crearRegistro(nombreBaseDatos, tabla, registros);
 	}
 
 	@Override
 	public String leerTablaBaseDatos(String nombreBaseDatos, String tabla, int numeroAtributos) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
-		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
+		tabla = "asignado_a";
 		return super.leerTablaBaseDatos(nombreBaseDatos, tabla, numeroAtributos);
 	}
 
 	@Override
 	public void actualizarRegistro(String nombreBaseDatos, String tabla, String atributo, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
-		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
+		tabla = "asignado_a";
 		super.actualizarRegistro(nombreBaseDatos, tabla, atributo, identificador);
 	}
 
 	@Override
 	public void eliminarRegistro(String nombreBaseDatos, String tabla, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-<<<<<<< HEAD
-		tabla = "id";
-=======
-		tabla = "proyecto";
->>>>>>> branch 'master' of https://github.com/JagaScripts/java-full-stack-dev-u22-ejercicio3.git
+		tabla = "asignado_a";
 		super.eliminarRegistro(nombreBaseDatos, tabla, identificador);
 	}
 
 	
 	@Override
 	public String toString() {
-
-		String nombreAux;
-		String idAux;
-
-		if(!this.nombre.equals("")) {
-			nombreAux = "'" + this.nombre + "'";
-		}else {
-			nombreAux = null;
-		}
-		if(!this.nombre.equals("")) {
-			idAux = "'" + this.nombre + "'";
-		}else {
-			idAux = null;
-		}
-
 		
+	
+	
+	
 		
-		return "(default ," + id + ", " + nombreAux + ", " + idAux + ")";
+		return "(" + this.cientifico.getDNI() + ", " + this.proyecto.getId() + ")";
 	}
 		
 	
