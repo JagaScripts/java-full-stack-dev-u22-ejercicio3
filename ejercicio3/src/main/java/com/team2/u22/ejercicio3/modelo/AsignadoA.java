@@ -16,7 +16,7 @@ import com.team2.u22.ejercicio3.modelo.gestiondb.ServicioBD;
  * 
  * Fecha de creación 15/05/2022
  */
-public class Asignado_A extends ServicioBD{
+public class AsignadoA extends ServicioBD{
 	
 	private Cientificos cientifico ;
 	private Proyecto proyecto;
@@ -25,7 +25,7 @@ public class Asignado_A extends ServicioBD{
 	/**
 	 * 
 	 */
-	public Asignado_A() {
+	public AsignadoA() {
 	}
 	
 	
@@ -36,7 +36,7 @@ public class Asignado_A extends ServicioBD{
 	 * @param director
 	 * @param cliente
 	 */
-	public Asignado_A(Cientificos cientifico, Proyecto proyecto) {
+	public AsignadoA(Cientificos cientifico, Proyecto proyecto) {
 		this.cientifico = cientifico;
 		this.proyecto = proyecto;
 
@@ -83,22 +83,15 @@ public class Asignado_A extends ServicioBD{
 	@Override
 	public String leerTablaBaseDatos(String nombreBaseDatos, String tabla, int numeroAtributos) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "asignado_a";
+		tabla = "cientifico";
 		return super.leerTablaBaseDatos(nombreBaseDatos, tabla, numeroAtributos);
 	}
 
 	@Override
 	public void actualizarRegistro(String nombreBaseDatos, String tabla, String atributo, String identificador) throws SQLException{
 		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "asignado_a";
+		tabla = "proyecto";
 		super.actualizarRegistro(nombreBaseDatos, tabla, atributo, identificador);
-	}
-
-	@Override
-	public void eliminarRegistro(String nombreBaseDatos, String tabla, String identificador) throws SQLException{
-		nombreBaseDatos = "ud22_ejercicios_db_clientes";
-		tabla = "asignado_a";
-		super.eliminarRegistro(nombreBaseDatos, tabla, identificador);
 	}
 
 	
@@ -106,8 +99,7 @@ public class Asignado_A extends ServicioBD{
 	public String toString() {
 		
 	
-	
-	
+
 		
 		return "(" + this.cientifico.getDNI() + ", " + this.proyecto.getId() + ")";
 	}
